@@ -110,7 +110,7 @@ function _getDelegateTarget(elem, target, selector) {
 }
 
 /**
- * Determine is a Node is an Element or Document
+ * Determine if a Node is an Element or Document
  *
  * @param {Node} node
  * @return {Boolean}
