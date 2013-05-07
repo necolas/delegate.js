@@ -52,6 +52,23 @@ delegate.on = function (type, selector, callback, capture) {
 };
 
 /**
+ * Remove an event-type callback from the event target
+ *
+ * @param {String} type
+ * @param {Function} callback
+ * @param {Boolean} [capture]
+ * @api public
+ */
+
+delegate.off = function (type, callback, capture) {
+    if (callback._delegateWrapper) {
+        callback = callback._delegateWrapper;
+    }
+
+    elem.removeEventListener(type, callback, capture || false);
+}
+
+/**
  * Walk up the DOM tree from the `target` element to which the event was
  * dispatched, up to the delegate `elem`. If at any step, a node matches the
  * given CSS `selector` then we know the event bubbled up through the
