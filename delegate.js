@@ -55,8 +55,10 @@ delegate.on = function (type, selector, callback, capture, /* private */ once) {
 };
 
 /**
+ * Register a one-off callback for an event type. The callback is removed once
+ * it has been invoked for the first time.
  *
- * @param {String} event
+ * @param {String} type
  * @param {String} selector
  * @param {Function} callback
  * @param {Boolean} [capture]
@@ -69,7 +71,7 @@ delegate.once = function (type, selector, callback, capture) {
 }
 
 /**
- * Remove an event-type callback from the event target
+ * Remove an event-type callback from the event target.
  *
  * @param {String} type
  * @param {Function} callback
