@@ -36,12 +36,15 @@ function delegate(node) {
  * @api public
  */
 
-delegate.on = function (type, selector, callback, capture) {
+delegate.on = function (type, selector, callback, capture, /* private */ once) {
     function wrapper(e) {
         // if this event has a delegateTarget, then we add it to the event
         // object (so that handlers may have a reference to the delegator
         // element) and fire the callback
         if (e.delegateTarget = _getDelegateTarget(elem, e.target, selector)) {
+            if (once === true) {
+                delegate(elem).off(type, wrapper);
+            }
             callback.call(elem, e);
         }
     }
@@ -50,6 +53,20 @@ delegate.on = function (type, selector, callback, capture) {
     elem.addEventListener(type, wrapper, capture || false);
     return callback;
 };
+
+/**
+ *
+ * @param {String} event
+ * @param {String} selector
+ * @param {Function} callback
+ * @param {Boolean} [capture]
+ * @return {Function}
+ * @api public
+ */
+
+delegate.once = function (type, selector, callback, capture) {
+    delegate.on(type, selector, callback, capture, true);
+}
 
 /**
  * Remove an event-type callback from the event target
