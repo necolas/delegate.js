@@ -1,4 +1,4 @@
-/*! delegate.js v0.0.0 - MIT license */
+/*! delegate.js v1.0.0 - MIT license */
 
 ;(function (global) { function moduleDefinition(matches) {
 

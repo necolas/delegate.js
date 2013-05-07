@@ -1,7 +1,7 @@
 {
     "name": "delegate.js",
     "description": "DOM event delegation component",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "main": "delegate.js",
     "ignore": [
         "test",
