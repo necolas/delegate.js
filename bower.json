@@ -1,0 +1,20 @@
+{
+    "name": "delegate.js",
+    "description": "DOM event delegation component",
+    "version": "0.0.0",
+    "main": "delegate.js",
+    "ignore": [
+        "test",
+        ".jshintrc",
+        ".travis.yml",
+        "CHANGELOG.md",
+        "karma.conf.js",
+        "package.json"
+    ],
+    "dependencies": {
+        "matches.js": "*"
+    },
+    "devDependencies": {
+        "chai": "*"
+    }
+}
