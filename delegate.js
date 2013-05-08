@@ -68,7 +68,7 @@ delegate.on = function (type, selector, callback, capture, /* private */ once) {
 
 delegate.once = function (type, selector, callback, capture) {
     delegate.on(type, selector, callback, capture, true);
-}
+};
 
 /**
  * Remove an event-type callback from the event target.
@@ -85,7 +85,7 @@ delegate.off = function (type, callback, capture) {
     }
 
     elem.removeEventListener(type, callback, capture || false);
-}
+};
 
 /**
  * Walk up the DOM tree from the `target` element to which the event was
