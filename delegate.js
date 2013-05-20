@@ -120,7 +120,7 @@ function _getDelegateTarget(elem, target, selector) {
  */
 
 function _isElem(node) {
-    if (node && node.nodeName && (node.nodeType == Node.ELEMENT_NODE || node.nodeType == Node.DOCUMENT_NODE)) {
+    if (node && node.nodeName && (node.nodeType === Node.ELEMENT_NODE || node.nodeType === Node.DOCUMENT_NODE)) {
         return true;
     }
     return false;
