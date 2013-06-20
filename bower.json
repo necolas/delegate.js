@@ -1,7 +1,7 @@
 {
     "name": "delegate.js",
     "description": "DOM event delegation component",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "delegate.js",
     "ignore": [
         "test",
@@ -15,6 +15,6 @@
         "matches.js": "*"
     },
     "devDependencies": {
-        "chai": "*"
+        "chai": "~1.6.1"
     }
 }

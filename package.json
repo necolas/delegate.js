@@ -1,6 +1,6 @@
 {
   "name": "delegate.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "karma": "~0.8.5"
   },
