@@ -1,5 +1,7 @@
 == HEAD
 
+* Fix Node-type check in IE8.
+
 == 1.0.1 (June 20, 2013)
 
 * Fix JSHint configuration.
