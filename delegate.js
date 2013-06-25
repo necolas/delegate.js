@@ -1,4 +1,4 @@
-/*! delegate.js v1.0.0 - Nicolas Gallagher - MIT license */
+/*! delegate.js v1.0.2 - Nicolas Gallagher - MIT license */
 
 ;(function (global) { function moduleDefinition(matches) {
 
