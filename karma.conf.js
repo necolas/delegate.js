@@ -13,8 +13,8 @@ basePath = '';
 files = [
   MOCHA,
   MOCHA_ADAPTER,
-  'components/matches.js/matches.js',
-  'components/chai/chai.js',
+  'bower_components/matches.js/matches.js',
+  'bower_components/chai/chai.js',
   'delegate.js',
   'test/**/*.js'
 ];
