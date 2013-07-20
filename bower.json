@@ -15,6 +15,6 @@
         "matches.js": "*"
     },
     "devDependencies": {
-        "chai": "~1.6.1"
+        "chai": ">=1.7.2"
     }
 }
