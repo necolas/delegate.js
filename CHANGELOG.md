@@ -1,5 +1,7 @@
 === HEAD
 
+* Ensure that `off()` removes `_delegateWrapper` from the callback.
+
 === 1.0.2 (June 25, 2013)
 
 * Fix Node-type check in IE8.

@@ -106,15 +106,27 @@ describe('delegate()', function () {
     });
 
     describe('.off(type, callback)', function () {
-        it('removes the event handler', function () {
-            var arr = [];
-            var handler = function (e) {
-                arr.push('success');
-            }
+        var arr;
+        var handler = function (e) {
+            arr.push('success');
+        };
+
+        beforeEach(function () {
+            arr = [];
             delegate(document).on('click', '.delegator', handler);
+        });
+
+        it('removes the event handler', function () {
             delegate(document).off('click', handler);
             targetElem.dispatchEvent(evt);
             expect(arr).to.eql([]);
+        });
+
+        it('removes the wrapper from the callback', function (done) {
+            expect(handler._delegateWrapper).to.exist;
+            delegate(document).off('click', handler);
+            done();
+            expect(handler._delegateWrapper).to.not.exist;
         });
     });
 });

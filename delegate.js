@@ -82,6 +82,7 @@ delegate.once = function (type, selector, callback, capture) {
 delegate.off = function (type, callback, capture) {
     if (callback._delegateWrapper) {
         callback = callback._delegateWrapper;
+        delete callback._delegateWrapper;
     }
 
     elem.removeEventListener(type, callback, capture || false);
