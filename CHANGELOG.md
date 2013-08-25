@@ -1,5 +1,6 @@
 === HEAD
 
+* Upgrade to Karma 0.10.x.
 * Ensure that `off()` removes `_delegateWrapper` from the callback.
 
 === 1.0.2 (June 25, 2013)
